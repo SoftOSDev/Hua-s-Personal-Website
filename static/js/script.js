@@ -165,46 +165,46 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
 
-    var fpsElement = document.createElement('div');
-    fpsElement.id = 'fps';
-    fpsElement.style.zIndex = '10000';
-    fpsElement.style.position = 'fixed';
-    fpsElement.style.left = '0';
-    document.body.insertBefore(fpsElement, document.body.firstChild);
+    // var fpsElement = document.createElement('div');
+    // fpsElement.id = 'fps';
+    // fpsElement.style.zIndex = '10000';
+    // fpsElement.style.position = 'fixed';
+    // fpsElement.style.left = '0';
+    // document.body.insertBefore(fpsElement, document.body.firstChild);
 
-    var showFPS = (function () {
-        var requestAnimationFrame = window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame ||
-            window.oRequestAnimationFrame ||
-            window.msRequestAnimationFrame ||
-            function (callback) {
-                window.setTimeout(callback, 1000 / 60);
-            };
+    // var showFPS = (function () {
+    //     var requestAnimationFrame = window.requestAnimationFrame ||
+    //         window.webkitRequestAnimationFrame ||
+    //         window.mozRequestAnimationFrame ||
+    //         window.oRequestAnimationFrame ||
+    //         window.msRequestAnimationFrame ||
+    //         function (callback) {
+    //             window.setTimeout(callback, 1000 / 60);
+    //         };
 
-        var fps = 0,
-            last = Date.now(),
-            offset, step, appendFps;
+    //     var fps = 0,
+    //         last = Date.now(),
+    //         offset, step, appendFps;
 
-        step = function () {
-            offset = Date.now() - last;
-            fps += 1;
+    //     step = function () {
+    //         offset = Date.now() - last;
+    //         fps += 1;
 
-            if (offset >= 1000) {
-                last += offset;
-                appendFps(fps);
-                fps = 0;
-            }
+    //         if (offset >= 1000) {
+    //             last += offset;
+    //             appendFps(fps);
+    //             fps = 0;
+    //         }
 
-            requestAnimationFrame(step);
-        };
+    //         requestAnimationFrame(step);
+    //     };
 
-        appendFps = function (fpsValue) {
-            fpsElement.textContent = 'FPS: ' + fpsValue;
-        };
+    //     appendFps = function (fpsValue) {
+    //         fpsElement.textContent = 'FPS: ' + fpsValue;
+    //     };
 
-        step();
-    })();
+    //     step();
+    // })();
     
     
     

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>正在跳转</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
+        <p>系统正在为您跳转...</p>
+        <a id="redirect-link" href="https://www.tanggaoyun.com/aff/LINWU" style="color: #007bff; text-decoration: none; font-weight: bold;">
+            如果您的浏览器没有自动跳转，请点击这里
+        </a>
+    </div>
+
+    <script>
+        (function() {
+            var targetUrl = "https://www.tanggaoyun.com/aff/LINWU";
+            
+            window.location.replace(targetUrl);
+                   
+            setTimeout(function() {
+                window.location.href = targetUrl;
+            }, 500);
+        })();
+    </script>
+</body>
+</html>
